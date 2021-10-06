@@ -17,14 +17,14 @@ function enqueue_alum_styles_and_scripts(){
     //main theme stylesheet
     wp_enqueue_style('stylecss', get_template_directory_uri(  ) . '/style.css', array(), '1.0.0', 'all');
     //alumni stylesheet
-    wp_enqueue_style( 'alum-styles', get_stylesheet_directory_uri(  ) . '/myassets/css/alum.css', array(), '1.0.0', 'all');
+    wp_enqueue_style( 'alum-styles', get_stylesheet_directory_uri(  ) . '/myassets/css/alum.css', array(), false, 'all');
 
     //enqueue bootstrap js
     wp_enqueue_script( 'bootstrap-script', get_theme_file_uri( ) . '/myassets/bootstrap/js/bootstrap.bundle.min.js', array(), '1.0.0', false );
     //enqueue aos js
     wp_enqueue_script( 'aos-script', get_theme_file_uri( ) . '/myassets/aos-master/dist/aos.js', array(), '1.0.0', false );
-    //enqueue personal js files
-    wp_enqueue_script( 'alum-script', get_theme_file_uri(  ) . '/myassets/js/alum.js', array('jquery'), '1.0.0', true );
+    //enqueue alum js files
+    wp_enqueue_script( 'alum-script', get_theme_file_uri(  ) . '/myassets/js/alum.js', array('jquery'), 'false', true );
 
     //font awesome stuff
     wp_enqueue_style( 'fa-style', get_template_directory_uri(  ) . '/myassets/fontawesome/css/all.css');
@@ -33,5 +33,22 @@ function enqueue_alum_styles_and_scripts(){
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_alum_styles_and_scripts');
+
+
+//additional theme support
+function alumTheme_setup(){
+
+
+    //register nav menus
+    register_nav_menus(array(
+        'primary' => __( 'Primary Menu'),
+        'footer' => __( 'Footer Menu'),
+        'non-home' => __('Primary Non-Home Page Menu')
+    ));
+}
+
+add_action('after_setup_theme', 'alumTheme_setup');
+
+
 
 ?>

@@ -17,11 +17,11 @@ $('#scrollbtn1').on('click', function(e){
   $('.icon').click(function(){
     var a = $('#topnavbar');
     if(a.hasClass('topnav')){
-      a.toggleClass('responsive');
+      $('#menu-main-navigation').toggleClass('responsive');
       //$('#home-link').toggleClass('childclear');
       //$('#portfolio-link').toggleClass('childclear');
       //$('#contact-link').toggleClass('childclear');
-      $('.topnav a').toggleClass('childclear');
+      $('.topnav li').toggleClass('childclear');
     }
 
     })

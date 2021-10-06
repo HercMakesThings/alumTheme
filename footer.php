@@ -1,22 +1,26 @@
 <footer class="container-fluid">
       <div class="container">
         <div class="row justify-content-center">
-            <div data-aos="flip-down" class="col-sm-5 mt-3">
+            <div class="col-sm-5 mt-3">
               <div class="card">
                 <div class="card-header">See My Work!</div>
                 <div class="card-body">
                   <nav>
-                    <ul>
+                    <?php $args = array(
+                    'theme_location' => 'footer' 
+                     );?>
+                    <?php wp_nav_menu( $args ); ?>
+                    <!--<ul>
                       <li><a href="index.html">Home</a></li>
                       <li><a href="page.html">Portfolio</a></li>
                       <li><a href="page.html">Contact</a></li>
-                    </ul>
+                    </ul>-->
                   </nav>
                 </div>
               </div>
             </div>
             <div class="col-sm-5 mt-3">
-              <div data-aos="flip-up" class="card">
+              <div class="card">
                 <div class="card-header">Social Media</div>
                 <div class="card-body">
                   <ul>

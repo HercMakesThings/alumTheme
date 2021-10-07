@@ -38,7 +38,11 @@ add_action('wp_enqueue_scripts', 'enqueue_alum_styles_and_scripts');
 //additional theme support
 function alumTheme_setup(){
 
-
+    //add featured image support
+    add_theme_support('post-thumbnails');
+    add_image_size( 'small-thumbnail', 180, 120, true);
+    add_image_size('banner-image', 810, 200, true);
+    
     //register nav menus
     register_nav_menus(array(
         'primary' => __( 'Primary Menu'),

@@ -24,7 +24,7 @@
     </div>
 
     <!--main section-->
-    <section class="container mainarea-page py-3">
+    <section class="container mainarea-single py-3">
       <?php 
         if(have_posts()){
           while(have_posts()){

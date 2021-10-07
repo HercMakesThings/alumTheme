@@ -17,7 +17,7 @@ function enqueue_alum_styles_and_scripts(){
     //main theme stylesheet
     wp_enqueue_style('stylecss', get_template_directory_uri(  ) . '/style.css', array(), '1.0.0', 'all');
     //alumni stylesheet
-    wp_enqueue_style( 'alum-styles', get_stylesheet_directory_uri(  ) . '/myassets/css/alum.css', array(), null, 'all');
+    wp_enqueue_style( 'alum-styles', get_stylesheet_directory_uri(  ) . '/myassets/css/alum.css', array(), false, 'all');
 
     //enqueue bootstrap js
     wp_enqueue_script( 'bootstrap-script', get_theme_file_uri( ) . '/myassets/bootstrap/js/bootstrap.bundle.min.js', array(), '1.0.0', false );
@@ -42,7 +42,7 @@ function alumTheme_setup(){
     add_theme_support('post-thumbnails');
     add_image_size( 'small-thumbnail', 180, 120, true);
     add_image_size('banner-image', 810, 200, true);
-    
+
     //register nav menus
     register_nav_menus(array(
         'primary' => __( 'Primary Menu'),

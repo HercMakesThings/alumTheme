@@ -24,8 +24,15 @@
     </div>
 
     <!--main section-->
-    <section class="container mainarea">
-
+    <section class="container mainarea pt-3">
+      <?php 
+        if(have_posts()){
+          while(have_posts()){
+            the_post();
+            the_content();
+          }
+        }
+      ?>
     </section><!--mainarea section end-->
 
 

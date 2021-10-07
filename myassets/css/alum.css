@@ -2,7 +2,6 @@
 *****************general css**********************
 *************************************************/
 
-/*Version: 1.0.0*/
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
@@ -385,11 +384,13 @@ footer a:hover{
 .mainarea{
   /*background-color: #8896ab;*/
   background-color: #fff;
-  height: 1000px;
+  min-height: auto;
+  /*height: 600px;*/
   /*box-sizing: border-box;*/
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   margin-top: 20px;
   margin-bottom: 20px;
   border: 1px solid rgba(123, 109, 141, 0.3);
   border-radius: 3px;
+  text-align: center;
 }

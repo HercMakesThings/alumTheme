@@ -1,9 +1,10 @@
 <?php
-
+//funtion for customizing top secton images and heading
 function alum_landing_images($wp_customize){
     //declaring new customizer section
     $wp_customize->add_section('landingpage_identity_section', array(
-        'title' => 'Top Section Identity'
+        'title' => 'Top Section Identity',
+        'priority' => 1
     ));
 
     //setting & Control pair for landing page site title
@@ -35,8 +36,10 @@ function alum_landing_images($wp_customize){
         'width' => '150',
         'height' => '150'
     )));
+
 }
 
 add_action('customize_register', 'alum_landing_images');
+
 
 ?>

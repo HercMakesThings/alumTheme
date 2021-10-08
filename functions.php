@@ -53,6 +53,6 @@ function alumTheme_setup(){
 
 add_action('after_setup_theme', 'alumTheme_setup');
 
-
+include_once 'includes/customizer.php';
 
 ?>

@@ -21,7 +21,8 @@
             </div>
         </section>
         <?php }//end about while loop
-        }//end about if loop
+        //end about if loop
+        }
         wp_reset_postdata();
         ?>
 
@@ -45,6 +46,7 @@
         </section>
 
         <?php }//end skillpost while loop
-        }//end skillpost if statement
+        //end skillpost if statement
+        } 
         wp_reset_postdata();
         ?>

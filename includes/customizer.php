@@ -23,7 +23,7 @@ function alum_landing_images($wp_customize){
         'label' => 'Background Image',
         'section' => 'landingpage_identity_section',
         'settings' => 'landingpage_identity_bgm',
-        'width' => '1920',
+        'width' => '1912',
         'height' => '1080'
     )));
 

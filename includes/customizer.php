@@ -41,5 +41,56 @@ function alum_landing_images($wp_customize){
 
 add_action('customize_register', 'alum_landing_images');
 
+function alum_site_colors($wp_customize){
+    //color picker setting
+    $wp_customize->add_setting('alum_color_setting', array(
+        'default' => '#760355',
+        'transport' => 'refresh'
+    ));
+    //declaring new customizer section
+    $wp_customize->add_section('alum_color_section', array(
+        'title' => 'Site Color',
+        'priority' => 30
+    ));
+    //color picker control
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'alum_color_control', array(
+        'label' => __('Site Color'),
+        'section' => 'alum_color_section',
+        'settings' => 'alum_color_setting'
+    )));
+}
+add_action('customize_register','alum_site_colors');
+
+function alum_customizer_css(){ ?>
+
+    <style type="text/css">
+        #slantedsec1{
+            background-color: <?php echo get_theme_mod('alum_color_setting'); ?>;!important
+        }
+
+        #topnavbarcontainer{
+            border-bottom: 4px solid <?php echo get_theme_mod('alum_color_setting'); ?>;!important
+        }
+
+        #topnavbar a{
+            color: <?php echo get_theme_mod('alum_color_setting'); ?>;!important
+        }
+
+        #topnavbar li:hover{
+            background-color: <?php echo get_theme_mod('alum_color_setting'); ?>;!important
+        }
+
+        #topnavbar a:hover{
+            background-color: <?php echo get_theme_mod('alum_color_setting'); ?>;!important
+        }
+
+        footer a:hover{
+            color: <?php echo get_theme_mod('alum_color_setting'); ?>;!important
+        }
+    </style>
+
+<?php }
+
+add_action('wp_head', 'alum_customizer_css');
 
 ?>

@@ -53,6 +53,17 @@ function alumTheme_setup(){
 
 add_action('after_setup_theme', 'alumTheme_setup');
 
+//Initialize the theme's widget area in the footer, and other places in the future
+function alum_widgets_init(){
+    register_sidebar(array(
+        'name' => 'Footer Widget',
+        'id' => 'alum_widget1'
+    ));
+}
+
+add_action('widgets_init', 'alum_widgets_init');
+
+//include additional php files like customizer php
 include_once 'includes/customizer.php';
 
 ?>

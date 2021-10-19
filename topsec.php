@@ -1,5 +1,5 @@
 <section id="topsec" class="scrolldemo" style="background-image: url('<?php echo wp_get_attachment_url(get_theme_mod('landingpage_identity_bgm')); ?>')">
-      <div data-aos="zoom-in" class="d-flex mt-2 me-2 justify-content-end">
+      <div data-aos="zoom-in" class="d-flex mt-2 me-2 justify-content-end topsec-searchbar">
         <?php get_search_form(); ?>
       </div>
       <div data-aos="zoom-in-right" id="top-title" class="row align-items-center justify-items-center">
